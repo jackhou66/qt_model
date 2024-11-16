@@ -1,0 +1,56 @@
+﻿生成启动时间为 2019/11/27 13:57:29。
+     1>项目“D:\hjc\log\22\treeMode20191117\treeMode20191117\treeMode20191117.vcxproj”在节点 2 上(Build 个目标)。
+     1>CustomBuild:
+         Moc'ing TreeModel.h...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_mymodelwidget.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_mymodelwidget.cpp, GeneratedFiles\Release\moc_mymodelwidget.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_mytreeview.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_mytreeview.cpp, GeneratedFiles\Release\moc_mytreeview.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_TreeItem.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_TreeItem.cpp, GeneratedFiles\Release\moc_TreeItem.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_TreeItemMimeData.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_TreeItemMimeData.cpp, GeneratedFiles\Release\moc_TreeItemMimeData.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_Treemode20191117.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_Treemode20191117.cpp, GeneratedFiles\Release\moc_Treemode20191117.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_TreeModel.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_TreeModel.cpp, GeneratedFiles\Release\moc_TreeModel.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_TreeUserMode.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_TreeUserMode.cpp, GeneratedFiles\Release\moc_TreeUserMode.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_TreeViewSearchLine.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_TreeViewSearchLine.cpp, GeneratedFiles\Release\moc_TreeViewSearchLine.cpp.
+       ClCompile:
+         D:\hjc\VS2013\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\Qt5.7.0\5.7\msvc2013\include /I.\GeneratedFiles\Debug /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtCore /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtGui /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtQml /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtBluetooth /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtWidgets /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtXml /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtLocation /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtMultimedia /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtNetwork /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtQuick /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtSql /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtTest /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\ActiveQt /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtOpenGL /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtScriptTools /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtUiTools /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtPrintSupport /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtScript /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtSensors /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtSvg /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtConcurrent /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtMultimediaWidgets /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtNfc /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtPositioning /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtSerialPort /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtWebChannel /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtWebSockets /IC:\Qt\Qt5.7.0\5.7\msvc2013\include\QtQuickWidgets /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_QML_LIB /D QT_BLUETOOTH_LIB /D QT_WIDGETS_LIB /D QT_XML_LIB /D QT_LOCATION_LIB /D QT_MULTIMEDIA_LIB /D QT_NETWORK_LIB /D QT_QUICK_LIB /D QT_SQL_LIB /D QT_TESTLIB_LIB /D QT_OPENGL_LIB /D QT_SCRIPTTOOLS_LIB /D QT_UITOOLS_LIB /D QT_PRINTSUPPORT_LIB /D QT_SCRIPT_LIB /D QT_SENSORS_LIB /D QT_SVG_LIB /D QT_CONCURRENT_LIB /D QT_MULTIMEDIAWIDGETS_LIB /D QT_NFC_LIB /D QT_POSITIONING_LIB /D QT_SERIALPORT_LIB /D QT_WEBCHANNEL_LIB /D QT_WEBSOCKETS_LIB /D QT_QUICKWIDGETS_LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\Debug\moc_TreeItemMimeData.cpp GeneratedFiles\Debug\moc_TreeModel.cpp GeneratedFiles\Debug\moc_Treemode20191117.cpp GeneratedFiles\Debug\moc_mymodelwidget.cpp TreeItemMimeData.cpp TreeModel.cpp Treemode20191117.cpp main.cpp mymodelwidget.cpp
+         moc_TreeItemMimeData.cpp
+         moc_TreeModel.cpp
+         moc_Treemode20191117.cpp
+         moc_mymodelwidget.cpp
+         TreeItemMimeData.cpp
+         TreeModel.cpp
+         Treemode20191117.cpp
+         main.cpp
+         mymodelwidget.cpp
+         正在生成代码...
+       Link:
+         D:\hjc\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\hjc\log\22\treeMode20191117\Win32\Debug\\treeMode20191117.exe" /NOLOGO /LIBPATH:C:\Qt\Qt5.7.0\5.7\msvc2013\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Qmld.lib Qt5Bluetoothd.lib Qt5Widgetsd.lib Qt5Xmld.lib Qt5Locationd.lib Qt5Multimediad.lib Qt5Networkd.lib Qt5Quickd.lib Qt5Sqld.lib Qt5Testd.lib Qt5AxContainerd.lib Qt5AxBased.lib Qt5OpenGLd.lib opengl32.lib glu32.lib Qt5ScriptToolsd.lib Qt5UiToolsd.lib Qt5PrintSupportd.lib Qt5Scriptd.lib Qt5Sensorsd.lib Qt5Svgd.lib Qt5Concurrentd.lib Qt5MultimediaWidgetsd.lib Qt5Nfcd.lib Qt5Positioningd.lib Qt5SerialPortd.lib Qt5WebChanneld.lib Qt5WebSocketsd.lib Qt5QuickWidgetsd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\hjc\log\22\treeMode20191117\Win32\Debug\treeMode20191117.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\hjc\log\22\treeMode20191117\Win32\Debug\treeMode20191117.lib" /MACHINE:X86 /SAFESEH Debug\moc_mymodelwidget.obj
+         Debug\moc_mytreeview.obj
+         Debug\moc_TreeItem.obj
+         Debug\moc_TreeItemMimeData.obj
+         Debug\moc_Treemode20191117.obj
+         Debug\moc_TreeModel.obj
+         Debug\moc_TreeUserMode.obj
+         Debug\moc_TreeViewSearchLine.obj
+         Debug\qrc_Treemode20191117.obj
+         Debug\main.obj
+         Debug\mymodelwidget.obj
+         Debug\mytreeview.obj
+         Debug\tinystr.obj
+         Debug\tinyxml.obj
+         Debug\tinyxmlerror.obj
+         Debug\tinyxmlparser.obj
+         Debug\TreeItem.obj
+         Debug\TreeItemMimeData.obj
+         Debug\Treemode20191117.obj
+         Debug\TreeModel.obj
+         Debug\TreeUserMode.obj
+         Debug\TreeView.obj
+         Debug\treeviewmaneger.obj
+         Debug\TreeViewSearchLine.obj
+         Debug\XMLFile.obj
+         treeMode20191117.vcxproj -> D:\hjc\log\22\treeMode20191117\Win32\Debug\treeMode20191117.exe
+     1>已完成生成项目“D:\hjc\log\22\treeMode20191117\treeMode20191117\treeMode20191117.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:09.23

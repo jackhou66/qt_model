@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<StuInfo ArmyType="1" PlantType="1" devicetype="0" name="0">
+    <Entity EntityId="2" PlantType="0" armyType="0" devicetype="1" name="0" isGroup="0">
+        <Entity EntityId="3" PlantType="0" armyType="0" devicetype="4" name="0" isGroup="0" />
+        <Parameter ParameterId="1" devicetype="2" Azimuth="22" Pitch="0" name="0" />
+        <Entity EntityId="3" PlantType="0" armyType="0" devicetype="4" name="0" isGroup="0" />
+        <Parameter ParameterId="1" devicetype="2" Azimuth="22" Pitch="0" name="0" />
+    </Entity>
+</StuInfo>
+<StuInfo ArmyType="1" PlantType="1" devicetype="0" name="0">
+    <Entity EntityId="2" PlantType="0" armyType="1" devicetype="1" name="0" isGroup="0">
+        <Entity EntityId="3" PlantType="1" armyType="1" devicetype="4" name="0" isGroup="0">
+            <Entity EntityId="4" PlantType="0" armyType="1" devicetype="5" name="0" isGroup="0">
+                <Entity EntityId="4" PlantType="-842150451" armyType="-842150451" devicetype="-842150451" name="0" isGroup="0">
+                    <Entity EntityId="3" PlantType="-842150451" armyType="-842150451" devicetype="-842150451" name="0" isGroup="0">
+                        <Entity EntityId="2" PlantType="-842150451" armyType="-842150451" devicetype="-842150451" name="0" isGroup="0" />
+                    </Entity>
+                </Entity>
+            </Entity>
+        </Entity>
+        <Parameter ParameterId="1" devicetype="2" Azimuth="22" Pitch="0" name="0" />
+    </Entity>
+</StuInfo>

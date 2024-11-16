@@ -1,0 +1,66 @@
+https://blog.csdn.net/sxpsxp12/article/details/73650333
+
+https://blog.csdn.net/sxpsxp12/article/details/73650333
+
+
+QTreeview 设置复选框、箭头、选项的QSS详细用法
+https://blog.csdn.net/naibozhuan3744/article/details/100699705
+
+QTreeView使用总结10，使用委托，定制item显示效果
+https://blog.csdn.net/dpsying/article/details/80354976
+
+树形控件QTreeView使用自定义模型model
+https://blog.csdn.net/liuguangzhou123/article/details/8712337
+
+大量案例
+https://blog.csdn.net/dpsying/article/details/80456263
+
+https://blog.csdn.net/hyongilfmmm/article/details/83099819
+
+void MyTreeView::mousePressEvent(QMouseEvent* event)
+{
+	// 点击空白处时取消所有已选择项
+	auto index = this->indexAt(event->pos());
+	if (index.row() == -1)
+	{
+		setCurrentIndex(index);
+	}
+	else
+	{
+		QTreeView::mousePressEvent(event);
+	}
+}
+ 
+
+QList<QStandardItem*?>?ParentList;
+?QStandardItem?*item;
+?
+item?=?new?QStandardItem(parentid);//添加父节点
+model->appendRow(item);
+ParentList.append(item);//父节点地址存入列表
+?
+//任意父节点插入子节点
+int?curRow?=?ui->treeView->currentIndex().row();
+QStandardItem?*?currentItem?=?ParentList[curRow];
+?
+itemChild?=?new?QStandardItem(NewChilNodes);//添加子节点
+currentItem->appendRow(itemChild);//绑定父节点
+
+bool StatisticsModel :: removeRows（int position，int rows，const QModelIndex& parent）
+ {
+ StatisticsEntry * parentItem = getItem（parent）; 
+ 
+ bool success1 = true; 
+ bool success2 = true; 
+ for（int i = position + rows  -  1; i> = position; i--）
+ {
+ QModelIndex child = index（i，0，parent）; 
+ QString title = this-> title（child）; //标题方法是匹配setTitle的getter方法
+ success1 = success1&& removeRows（0，rowCount（child），child）; // rowCount实现返回存储在StatisticsEntry :: _ children列表中的指定父索引的项目数量
+ beginRemoveRows（parent，i，i）; 
+ success2 = success2&&& parentItem-> removeChild（i）; //从StatisticsEntry :: _ children列表中删除一个条目
+ endRemoveRows（）; 
+} 
+ return success1&&&成功2 
+} 
+  

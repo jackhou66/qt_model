@@ -1,0 +1,273 @@
+https://blog.csdn.net/sxpsxp12/article/details/73650333
+
+https://blog.csdn.net/sxpsxp12/article/details/73650333
+
+
+QTreeview 设置复选框、箭头、选项的QSS详细用法
+https://blog.csdn.net/naibozhuan3744/article/details/100699705
+
+QTreeView使用总结10，使用委托，定制item显示效果
+https://blog.csdn.net/dpsying/article/details/80354976
+
+树形控件QTreeView使用自定义模型model
+https://blog.csdn.net/liuguangzhou123/article/details/8712337
+
+https://blog.csdn.net/u010779194/article/details/12718161
+
+厉害的案例
+https://blog.csdn.net/wsj18808050/article/details/47403809
+
+https://blog.csdn.net/xiaoxiaoyusheng2012/article/details/46564155
+
+大量案例
+https://blog.csdn.net/dpsying/article/details/80456263
+
+https://blog.csdn.net/hyongilfmmm/article/details/83099819
+
+void MyTreeView::mousePressEvent(QMouseEvent* event)
+{
+	// 点击空白处时取消所有已选择项
+	auto index = this->indexAt(event->pos());
+	if (index.row() == -1)
+	{
+		setCurrentIndex(index);
+	}
+	else
+	{
+		QTreeView::mousePressEvent(event);
+	}
+}
+ 
+
+QList<QStandardItem*?>?ParentList;
+?QStandardItem?*item;
+?
+item?=?new?QStandardItem(parentid);//添加父节点
+model->appendRow(item);
+ParentList.append(item);//父节点地址存入列表
+?
+//任意父节点插入子节点
+int?curRow?=?ui->treeView->currentIndex().row();
+QStandardItem?*?currentItem?=?ParentList[curRow];
+?
+itemChild?=?new?QStandardItem(NewChilNodes);//添加子节点
+currentItem->appendRow(itemChild);//绑定父节点
+
+bool StatisticsModel :: removeRows（int position，int rows，const QModelIndex& parent）
+ {
+ StatisticsEntry * parentItem = getItem（parent）; 
+ 
+ bool success1 = true; 
+ bool success2 = true; 
+ for（int i = position + rows  -  1; i> = position; i--）
+ {
+ QModelIndex child = index（i，0，parent）; 
+ QString title = this-> title（child）; //标题方法是匹配setTitle的getter方法
+ success1 = success1&& removeRows（0，rowCount（child），child）; // rowCount实现返回存储在StatisticsEntry :: _ children列表中的指定父索引的项目数量
+ beginRemoveRows（parent，i，i）; 
+ success2 = success2&&& parentItem-> removeChild（i）; //从StatisticsEntry :: _ children列表中删除一个条目
+ endRemoveRows（）; 
+} 
+ return success1&&&成功2 
+} 
+  
+
+item  绑定对话框的
+
+connect(m_tree, SIGNAL(clicked(const QModelIndex)), this, SLOT(dealShowCheckDlg(const QModelIndex)));
+void MainWindow::dealShowCheckDlg(const QModelIndex &index)
+{
+    QStandardItem *pItem = m_model->itemFromIndex(index);
+    QString indexData = "";
+    int row = -1;
+    QString xmlFileName = "";
+    if (!index.parent().data().toString().isEmpty())
+    {
+        indexData = index.data().toString();
+        row = index.row();
+        xmlFileName = m_checkSrcList.at(row);
+    }
+    ProductConfigDlg *dlg = NULL;
+    QVariant tempDlgVar = pItem->data(Qt::UserRole + row + 1);
+    if (!tempDlgVar.isNull())
+    {
+        dlg = tempDlgVar.value<ProductConfigDlg*>();
+    }
+    else
+    {
+        dlg = new ProductConfigDlg;
+        QVariant dlgValue = QVariant::fromValue(dlg);
+        pItem->setData(dlgValue, Qt::UserRole + row + 1);
+    }
+    if (dlg == NULL)
+        return;
+dlg->show();
+————————————————
+版权声明：本文为CSDN博主「ISmileLi」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/toby54king/article/details/78595449
+
+
+
+QList<MyTreeItem*>  fli;
+	for (int i = 0; i < 2; i++)
+	{
+		m_rootItem = new MyTreeItem;
+		m_rootItem->armyType = (ArmyType)1;
+		m_rootItem->plantType = (PlantType)1;
+		m_rootItem->devicetype = (DviceType)1;
+		QVariant a;
+		a.setValue(m_rootItem->children);
+		m_rootItem->setData(1, a);
+		if (i == 0)
+		{
+			m_rootItem->name = tr("Red");
+			for (int m = 0; m< 2; m++)
+			{
+				MyTreeItem*ff = new MyTreeItem;
+				ff->EntityId = "2";
+				ff->name = tr("Red_soder");
+				ff->armyType = (ArmyType)1;
+				ff->plantType = (PlantType)1;
+				ff->devicetype = (DviceType)1;
+				ff->parameter.ParameterId = "1";
+				ff->parameter.devicetype = (DviceType)2;
+				ff->parameter.Azimuth = "22";
+				ff->parameter.name = "777";
+				//m_rootItem->children << ff;
+				QVariant a;
+				a.setValue(ff->children);
+				ff->setData(2, a);
+				m_rootItem->appendChild(ff);
+			}
+		}
+		else
+		{
+			m_rootItem->name = tr("Blue");
+			m_rootItem->EntityId = "1";
+			for (int ii = 0; ii < 1; ii++)
+			{
+				MyTreeItem* ci = new MyTreeItem;
+				ci->EntityId = "2";
+				ci->name = tr("Blue_soder_1");
+				ci->armyType = (ArmyType)1;
+				ci->plantType = (PlantType)1;
+				ci->devicetype = (DviceType)1;
+				ci->parameter.ParameterId = "1";
+				ci->parameter.devicetype = (DviceType)2;
+				ci->parameter.Azimuth = "22";
+				 
+				ci->setData(3, a);
+				for (int k = 0; k<1; k++)
+				{
+					MyTreeItem*di = new MyTreeItem;
+					di->EntityId = "3";
+					di->name = tr("Blue_soder_2");
+					di->armyType = (ArmyType)4;
+					di->plantType = (PlantType)4;
+					di->devicetype = (DviceType)4;
+					QVariant a;
+					a.setValue(di->children);
+					di->setData(4, a);
+					if (k == 1)
+					{
+						di->parameter.ParameterId = "44";
+						di->parameter.devicetype = (DviceType)1;
+						di->parameter.Azimuth = "88";
+					}
+					for (int p = 0; p < 1; p++)
+					{
+						MyTreeItem*ee = new MyTreeItem;
+						ee->EntityId = "4";
+						ee->name = tr("Blue_Red_soder_1");
+						ee->armyType = (ArmyType)5;
+						ee->plantType = (PlantType)5;
+						ee->devicetype = (DviceType)5;
+						//di->children << ee;
+						di->appendChild(ee);
+						QVariant a;
+						a.setValue(ee->children);
+						di->setData(5,a);
+					}
+					ci->appendChild(di);
+				}
+				m_rootItem->appendChild(ci);
+			}
+
+		}
+		fli.append(m_rootItem);
+	}
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+//////////////////////////////////////////////////////////////////////////////////////////////////
+void Remove()
+{
+ QModelIndexList selectedList = QtreeView->selectionModel()->selectedIndexes();
+
+ QListIterator<QModelIndex> i(selectedList);
+ while (i.hasNext())
+{
+    QModelIndex modelIndex = i.next();
+    QModelIndex modelIndexParent = modelIndex.parent()
+
+    //子节点内部指针
+    Database* database = static_cast<Database*>(modelIndex.internalPointer () )
+
+    //父节点内部指针
+    Database* databaseParent = static_cast<Database*>(modelIndexParent.internalPointer () )
+
+//开始删除
+//一次只删除1个，没法连着删除，因为多选不是连着选的。
+beginRemoveRows( modelIndexParent, modelIndex.row(), modelIndex.row() );
+
+DatabaseSourceParent->ChildList().removeOne( Database );
+
+endMoveRows()
+
+
+
+
+	//* 如果是无效的节点则返回无效节点
+	if (!index.isValid())
+	{
+		return QModelIndex();
+	}
+	Entity* indexData = static_cast<Entity*>(index.internalPointer());
+	for (int i = 0; i < mItemList.count(); i++)
+	{
+		//* 如果是父节点（分组）则返回无效父节点（分组没有父节点）
+		if (mItemList[i] == indexData) 
+		{
+			qDebug() << "111111111111111111111" << indexData->name << endl;
+			return QModelIndex();
+		}
+		else
+		{
+			//* 试图判断该节点的父节点是不是mItemList[i]
+			for (int ii = 0; ii < mItemList[i]->children.count(); ii++)
+			{
+				//* mItemList[i] 成功匹配为indexData的父节点
+				if (indexData == mItemList[i]->children[ii]) 
+				{
+					qDebug() << "2222222222222222222" << indexData->name << endl;
+					//* 使用mItemList[i]作为数据创建一个父节点
+					QModelIndex parentIndex = createIndex(i, 0, mItemList[i]);
+					return parentIndex;
+				}
+			}
+		}
+	}
+	//* 未匹配到有效的父节点数据，返回无效节点
+	return QModelIndex();
+
+
+
+for (int ll = 0; ll < mItemList[i]->children[ii]->children[kk]->children[hh]->children.count(); ll++)
+									{
+										//* mItemList[i] 成功匹配为indexData的父节点
+										if (indexData == mItemList[i]->children[ii]->children[kk]->children[hh]->children[ll])
+										{
+											//* 使用mItemList[i]作为数据创建一个父节点
+											qDebug() << i << "indexDataTemp" << indexData->name << endl;
+											parentIndex = createIndex(hh, 0, mItemList[i]->children[ii]->children[kk]->children[hh]);
+											return parentIndex;
+										}
+									}
